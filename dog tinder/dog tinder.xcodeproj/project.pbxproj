@@ -11,6 +11,7 @@
 		22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501EAE252FAC4000A58C46 /* ContentView.swift */; };
 		22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB0252FAC4200A58C46 /* Assets.xcassets */; };
 		22501EB4252FAC4200A58C46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */; };
+		918C40BF25310FA500F8AE17 /* DogTinderTests in Resources */ = {isa = PBXBuildFile; fileRef = 918C40BE25310FA500F8AE17 /* DogTinderTests */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		22501EB0252FAC4200A58C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22501EB5252FAC4200A58C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		918C40BE25310FA500F8AE17 /* DogTinderTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DogTinderTests; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +38,7 @@
 		22501EA0252FAC4000A58C46 = {
 			isa = PBXGroup;
 			children = (
+				918C40BE25310FA500F8AE17 /* DogTinderTests */,
 				22501EAB252FAC4000A58C46 /* dog tinder */,
 				22501EAA252FAC4000A58C46 /* Products */,
 			);
@@ -127,6 +130,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22501EB4252FAC4200A58C46 /* Preview Assets.xcassets in Resources */,
+				918C40BF25310FA500F8AE17 /* DogTinderTests in Resources */,
 				22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
