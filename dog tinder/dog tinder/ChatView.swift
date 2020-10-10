@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ChatView: View {
     var body: some View {
-        Text("Chat")
+        Text(/*@START_MENU_TOKEN@*/"Chat View"/*@END_MENU_TOKEN@*/)
     }
 }
 

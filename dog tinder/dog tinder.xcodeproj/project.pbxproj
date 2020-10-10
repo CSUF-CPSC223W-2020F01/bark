@@ -11,9 +11,6 @@
 		22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501EAE252FAC4000A58C46 /* ContentView.swift */; };
 		22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB0252FAC4200A58C46 /* Assets.xcassets */; };
 		22501EB4252FAC4200A58C46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */; };
-		22501ECC25300AF500A58C46 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501ECB25300AF500A58C46 /* HomeView.swift */; };
-		22501ECF25300B0E00A58C46 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501ECE25300B0E00A58C46 /* ChatView.swift */; };
-		22501ED225300B2D00A58C46 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501ED125300B2D00A58C46 /* UserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +20,6 @@
 		22501EB0252FAC4200A58C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22501EB5252FAC4200A58C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		22501ECB25300AF500A58C46 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		22501ECE25300B0E00A58C46 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		22501ED125300B2D00A58C46 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; usesTabs = 1; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +54,6 @@
 			children = (
 				22501EAC252FAC4000A58C46 /* dog_tinderApp.swift */,
 				22501EAE252FAC4000A58C46 /* ContentView.swift */,
-				22501ECB25300AF500A58C46 /* HomeView.swift */,
-				22501ED125300B2D00A58C46 /* UserView.swift */,
-				22501ECE25300B0E00A58C46 /* ChatView.swift */,
 				22501EB0252FAC4200A58C46 /* Assets.xcassets */,
 				22501EB5252FAC4200A58C46 /* Info.plist */,
 				22501EB2252FAC4200A58C46 /* Preview Content */,
@@ -147,9 +138,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22501ECF25300B0E00A58C46 /* ChatView.swift in Sources */,
-				22501ECC25300AF500A58C46 /* HomeView.swift in Sources */,
-				22501ED225300B2D00A58C46 /* UserView.swift in Sources */,
 				22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */,
 				22501EAD252FAC4000A58C46 /* dog_tinderApp.swift in Sources */,
 			);
