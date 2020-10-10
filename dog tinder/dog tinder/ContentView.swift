@@ -13,7 +13,7 @@ struct ContentView: View {
                 Image(systemName: "message")
                 Text("Chat")
             }
-            UserView().tabItem {
+            UserProfileView().tabItem {
                 Image(systemName: "person")
                 Text("Profile")
             }
