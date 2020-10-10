@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct UserView: View {
+struct UserProfileView: View {
    var body: some View {
       NavigationView {
         //when clicked, the page will change to edit view.
@@ -19,14 +19,34 @@ struct UserView: View {
    }
 }
 struct EditView: View {
+    @State private var dogs = ["Barker", "Spot", "Dot"]
    var body: some View {
-      Text("edit view")
+    NavigationView {
+               List {
+                   ForEach(dogs, id: \.self) { dog in
+                       Text(dog)
+                   }
+                   .onDelete(perform: delete)
+               }
+               .navigationBarTitle(Text("dogs"))
+               .navigationBarItems(trailing: Button(action: {
+                   self.addRow()
+               }) {
+                   Image(systemName: "plus")
+               })
+           }
+       }
+       func addRow() {
+           self.dogs.append("new dog")
+       }
+       func delete(at offsets: IndexSet) {
+           dogs.remove(atOffsets: offsets)
+       }
    }
-}
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            UserView()
+            UserProfileView()
         }
     }
 }
