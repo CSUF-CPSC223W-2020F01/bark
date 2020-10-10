@@ -11,13 +11,9 @@
 		22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501EAE252FAC4000A58C46 /* ContentView.swift */; };
 		22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB0252FAC4200A58C46 /* Assets.xcassets */; };
 		22501EB4252FAC4200A58C46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */; };
-<<<<<<< HEAD
 		22501ECC25300AF500A58C46 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501ECB25300AF500A58C46 /* HomeView.swift */; };
 		22501ECF25300B0E00A58C46 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501ECE25300B0E00A58C46 /* ChatView.swift */; };
 		22501ED225300B2D00A58C46 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501ED125300B2D00A58C46 /* UserView.swift */; };
-=======
-		918C40BF25310FA500F8AE17 /* DogTinderTests in Resources */ = {isa = PBXBuildFile; fileRef = 918C40BE25310FA500F8AE17 /* DogTinderTests */; };
->>>>>>> 1531d1fe37ac0d0b3548bbbafdcd70de8a51145e
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,13 +23,9 @@
 		22501EB0252FAC4200A58C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22501EB5252FAC4200A58C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		22501ECB25300AF500A58C46 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		22501ECE25300B0E00A58C46 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		22501ED125300B2D00A58C46 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; usesTabs = 1; };
-=======
-		918C40BE25310FA500F8AE17 /* DogTinderTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DogTinderTests; sourceTree = "<group>"; };
->>>>>>> 1531d1fe37ac0d0b3548bbbafdcd70de8a51145e
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +42,6 @@
 		22501EA0252FAC4000A58C46 = {
 			isa = PBXGroup;
 			children = (
-				918C40BE25310FA500F8AE17 /* DogTinderTests */,
 				22501EAB252FAC4000A58C46 /* dog tinder */,
 				22501EAA252FAC4000A58C46 /* Products */,
 			);
@@ -145,7 +136,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				22501EB4252FAC4200A58C46 /* Preview Assets.xcassets in Resources */,
-				918C40BF25310FA500F8AE17 /* DogTinderTests in Resources */,
 				22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
