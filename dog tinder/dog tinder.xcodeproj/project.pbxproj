@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		222BBCB3253139D600FA19DD /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BBCAF253139D600FA19DD /* UserView.swift */; };
+		222BBCB4253139D600FA19DD /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BBCB0253139D600FA19DD /* UserProfileView.swift */; };
+		222BBCB5253139D600FA19DD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BBCB1253139D600FA19DD /* HomeView.swift */; };
+		222BBCB6253139D600FA19DD /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BBCB2253139D600FA19DD /* ChatView.swift */; };
 		22501EAD252FAC4000A58C46 /* dog_tinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501EAC252FAC4000A58C46 /* dog_tinderApp.swift */; };
 		22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501EAE252FAC4000A58C46 /* ContentView.swift */; };
 		22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB0252FAC4200A58C46 /* Assets.xcassets */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		222BBCAF253139D600FA19DD /* UserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserView.swift; path = "../../../../../Downloads/project-pog_dog-master/dog tinder/dog tinder/UserView.swift"; sourceTree = "<group>"; };
+		222BBCB0253139D600FA19DD /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileView.swift; path = "../../../../../Downloads/project-pog_dog-master/dog tinder/dog tinder/UserProfileView.swift"; sourceTree = "<group>"; };
+		222BBCB1253139D600FA19DD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = "../../../../../Downloads/project-pog_dog-master/dog tinder/dog tinder/HomeView.swift"; sourceTree = "<group>"; };
+		222BBCB2253139D600FA19DD /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatView.swift; path = "../../../../../Downloads/project-pog_dog-master/dog tinder/dog tinder/ChatView.swift"; sourceTree = "<group>"; };
 		22501EA9252FAC4000A58C46 /* dog tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dog tinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22501EAC252FAC4000A58C46 /* dog_tinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dog_tinderApp.swift; sourceTree = "<group>"; };
 		22501EAE252FAC4000A58C46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				22501EAC252FAC4000A58C46 /* dog_tinderApp.swift */,
+				222BBCB2253139D600FA19DD /* ChatView.swift */,
+				222BBCB1253139D600FA19DD /* HomeView.swift */,
+				222BBCB0253139D600FA19DD /* UserProfileView.swift */,
+				222BBCAF253139D600FA19DD /* UserView.swift */,
 				22501EAE252FAC4000A58C46 /* ContentView.swift */,
 				22501EB0252FAC4200A58C46 /* Assets.xcassets */,
 				22501EB5252FAC4200A58C46 /* Info.plist */,
@@ -139,7 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */,
+				222BBCB3253139D600FA19DD /* UserView.swift in Sources */,
 				22501EAD252FAC4000A58C46 /* dog_tinderApp.swift in Sources */,
+				222BBCB5253139D600FA19DD /* HomeView.swift in Sources */,
+				222BBCB6253139D600FA19DD /* ChatView.swift in Sources */,
+				222BBCB4253139D600FA19DD /* UserProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
