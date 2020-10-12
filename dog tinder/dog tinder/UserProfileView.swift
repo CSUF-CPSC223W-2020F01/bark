@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct UserView: View {
+struct UserProfileView: View {
    var body: some View {
       NavigationView {
         //when clicked, the page will change to edit view.
@@ -26,7 +26,7 @@ struct EditView: View {
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            UserView()
+            UserProfileView()
         }
     }
 }
