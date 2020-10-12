@@ -14,10 +14,25 @@
 		22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501EAE252FAC4000A58C46 /* ContentView.swift */; };
 		22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB0252FAC4200A58C46 /* Assets.xcassets */; };
 		22501EB4252FAC4200A58C46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */; };
+		916E134D2534356200D340A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E134C2534356200D340A0 /* User.swift */; };
+		916E13502534359200D340A0 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E134F2534359200D340A0 /* Dog.swift */; };
+		916E136025343C4400D340A0 /* dog_tinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E135F25343C4400D340A0 /* dog_tinderTests.swift */; };
+		916E137225343CFE00D340A0 /* DogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E137125343CFE00D340A0 /* DogTests.swift */; };
+		916E137625343D1B00D340A0 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E137525343D1B00D340A0 /* UserTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		916E136225343C4400D340A0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22501EA1252FAC4000A58C46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22501EA8252FAC4000A58C46;
+			remoteInfo = "dog tinder";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		222BBCB0253139D600FA19DD /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		222BBCB0253139D600FA19DD /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileView.swift; path = "dog tinder/UserProfileView.swift"; sourceTree = SOURCE_ROOT; };
 		222BBCB1253139D600FA19DD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = "dog tinder/HomeView.swift"; sourceTree = SOURCE_ROOT; };
 		222BBCB2253139D600FA19DD /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatView.swift; path = "dog tinder/ChatView.swift"; sourceTree = SOURCE_ROOT; };
 		22501EA9252FAC4000A58C46 /* dog tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dog tinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +41,24 @@
 		22501EB0252FAC4200A58C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22501EB5252FAC4200A58C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		916E134C2534356200D340A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		916E134F2534359200D340A0 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		916E135D25343C4400D340A0 /* DogTinderTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DogTinderTests; path = "../../../../../../../../Desktop/223/project-pog_dog/dog tinder/DogTinderTests"; sourceTree = BUILT_PRODUCTS_DIR; };
+		916E135F25343C4400D340A0 /* dog_tinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dog_tinderTests.swift; sourceTree = "<group>"; };
+		916E136125343C4400D340A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		916E137125343CFE00D340A0 /* DogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTests.swift; sourceTree = "<group>"; };
+		916E137525343D1B00D340A0 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		22501EA6252FAC4000A58C46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		916E135A25343C4400D340A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				22501EAB252FAC4000A58C46 /* dog tinder */,
+				916E135E25343C4400D340A0 /* dog tinderTests */,
 				22501EAA252FAC4000A58C46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				22501EA9252FAC4000A58C46 /* dog tinder.app */,
+				916E135D25343C4400D340A0 /* DogTinderTests */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +93,8 @@
 				222BBCB2253139D600FA19DD /* ChatView.swift */,
 				222BBCB1253139D600FA19DD /* HomeView.swift */,
 				222BBCB0253139D600FA19DD /* UserProfileView.swift */,
+				916E134C2534356200D340A0 /* User.swift */,
+				916E134F2534359200D340A0 /* Dog.swift */,
 				22501EAE252FAC4000A58C46 /* ContentView.swift */,
 				22501EB0252FAC4200A58C46 /* Assets.xcassets */,
 				22501EB5252FAC4200A58C46 /* Info.plist */,
@@ -76,6 +109,17 @@
 				22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		916E135E25343C4400D340A0 /* dog tinderTests */ = {
+			isa = PBXGroup;
+			children = (
+				916E135F25343C4400D340A0 /* dog_tinderTests.swift */,
+				916E136125343C4400D340A0 /* Info.plist */,
+				916E137125343CFE00D340A0 /* DogTests.swift */,
+				916E137525343D1B00D340A0 /* UserTests.swift */,
+			);
+			path = "dog tinderTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,6 +142,24 @@
 			productReference = 22501EA9252FAC4000A58C46 /* dog tinder.app */;
 			productType = "com.apple.product-type.application";
 		};
+		916E135C25343C4400D340A0 /* dog tinderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 916E136425343C4400D340A0 /* Build configuration list for PBXNativeTarget "dog tinderTests" */;
+			buildPhases = (
+				916E135925343C4400D340A0 /* Sources */,
+				916E135A25343C4400D340A0 /* Frameworks */,
+				916E135B25343C4400D340A0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				916E136325343C4400D340A0 /* PBXTargetDependency */,
+			);
+			name = "dog tinderTests";
+			productName = "dog tinderTests";
+			productReference = 916E135D25343C4400D340A0 /* DogTinderTests */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -109,6 +171,10 @@
 				TargetAttributes = {
 					22501EA8252FAC4000A58C46 = {
 						CreatedOnToolsVersion = 12.0.1;
+					};
+					916E135C25343C4400D340A0 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 22501EA8252FAC4000A58C46;
 					};
 				};
 			};
@@ -126,6 +192,7 @@
 			projectRoot = "";
 			targets = (
 				22501EA8252FAC4000A58C46 /* dog tinder */,
+				916E135C25343C4400D340A0 /* dog tinderTests */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +207,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		916E135B25343C4400D340A0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -148,14 +222,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */,
+				916E13502534359200D340A0 /* Dog.swift in Sources */,
 				22501EAD252FAC4000A58C46 /* dog_tinderApp.swift in Sources */,
+				916E134D2534356200D340A0 /* User.swift in Sources */,
 				222BBCB5253139D600FA19DD /* HomeView.swift in Sources */,
 				222BBCB6253139D600FA19DD /* ChatView.swift in Sources */,
 				222BBCB4253139D600FA19DD /* UserProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		916E135925343C4400D340A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				916E137625343D1B00D340A0 /* UserTests.swift in Sources */,
+				916E137225343CFE00D340A0 /* DogTests.swift in Sources */,
+				916E136025343C4400D340A0 /* dog_tinderTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		916E136325343C4400D340A0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22501EA8252FAC4000A58C46 /* dog tinder */;
+			targetProxy = 916E136225343C4400D340A0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		22501EB6252FAC4200A58C46 /* Debug */ = {
@@ -316,6 +410,44 @@
 			};
 			name = Release;
 		};
+		916E136525343C4400D340A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "dog tinderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Learning-xcode.dog-tinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dog tinder.app/dog tinder";
+			};
+			name = Debug;
+		};
+		916E136625343C4400D340A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "dog tinderTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Learning-xcode.dog-tinderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/dog tinder.app/dog tinder";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +465,15 @@
 			buildConfigurations = (
 				22501EB9252FAC4200A58C46 /* Debug */,
 				22501EBA252FAC4200A58C46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		916E136425343C4400D340A0 /* Build configuration list for PBXNativeTarget "dog tinderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				916E136525343C4400D340A0 /* Debug */,
+				916E136625343C4400D340A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
