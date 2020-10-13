@@ -11,17 +11,17 @@ class User : ObservableObject {
   @Published  var lastName: String = "Smith"
   @Published  var city: String = "NYC"
   @Published  var state: String = "NY"
-  @Published  var noon: Bool = false
+  @Published  var morning: Bool = false
   @Published  var afterNoon: Bool = false
   @Published  var night: Bool = false
   @Published  var listOfDogs: [String: Dog] = [:]
     
-    init(firstName: String, lastName: String, city: String, state: String, noon: Bool, afterNoon: Bool, night: Bool, petName: String, Dog: Dog){
+    init(firstName: String, lastName: String, city: String, state: String, morning: Bool, afterNoon: Bool, night: Bool, petName: String, Dog: Dog){
         self.firstName = firstName
         self.lastName = lastName
         self.city = city
         self.state = state
-        self.noon = noon
+        self.morning = morning
         self.afterNoon = afterNoon
         self.night = night
         self.listOfDogs = [Dog.name : Dog]
