@@ -9,7 +9,7 @@
 import SwiftUI
 var pompom: Dog = Dog(name: "Pebbles", breed: "Pomeranian", temperament: "Lazy", size: "12' ", weight: 15 , description: "Lazy but funny ")
 
-var user: User = User(firstName:"Miguel", lastName: "Lee", city: "Fontana", state: "California", morning: true, afterNoon: true, night: true, petName: pompom.name, Dog: pompom)
+var user: User = User(firstName:"Miguel", lastName: "Lee", city: "Fontana", state: "California", morning: true, afterNoon: true, night: true, Dog: pompom)
 
 struct UserProfileView: View {
     @ObservedObject var profile: User = user
