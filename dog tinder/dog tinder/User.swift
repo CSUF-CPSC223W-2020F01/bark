@@ -14,9 +14,9 @@ class User : ObservableObject {
   @Published  var morning: Bool = false
   @Published  var afterNoon: Bool = false
   @Published  var night: Bool = false
-  @Published  var listOfDogs: [String: Dog] = [:]
+  @Published  var listOfDogs: [Dog] = []
     
-    init(firstName: String, lastName: String, city: String, state: String, morning: Bool, afterNoon: Bool, night: Bool, petName: String, Dog: Dog){
+    init(firstName: String, lastName: String, city: String, state: String, morning: Bool, afterNoon: Bool, night: Bool, Dog: Dog){
         self.firstName = firstName
         self.lastName = lastName
         self.city = city
@@ -24,6 +24,6 @@ class User : ObservableObject {
         self.morning = morning
         self.afterNoon = afterNoon
         self.night = night
-        self.listOfDogs = [Dog.name : Dog]
+        self.listOfDogs += [Dog]
     }
 }
