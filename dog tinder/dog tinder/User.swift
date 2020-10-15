@@ -25,6 +25,6 @@ class User : ObservableObject {
         self.morning = morning
         self.afterNoon = afterNoon
         self.night = night
-        self.listOfDogs += []
+        self.listOfDogs.append(contentsOf: listOfDogs)
     }
 }

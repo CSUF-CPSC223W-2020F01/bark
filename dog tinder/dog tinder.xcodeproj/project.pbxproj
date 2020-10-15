@@ -14,6 +14,7 @@
 		22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501EAE252FAC4000A58C46 /* ContentView.swift */; };
 		22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB0252FAC4200A58C46 /* Assets.xcassets */; };
 		22501EB4252FAC4200A58C46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */; };
+		916015B625390033006B7309 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916015B525390033006B7309 /* Database.swift */; };
 		916E134D2534356200D340A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E134C2534356200D340A0 /* User.swift */; };
 		916E13502534359200D340A0 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E134F2534359200D340A0 /* Dog.swift */; };
 		916E136025343C4400D340A0 /* dog_tinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E135F25343C4400D340A0 /* dog_tinderTests.swift */; };
@@ -41,9 +42,10 @@
 		22501EB0252FAC4200A58C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22501EB5252FAC4200A58C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		916015B525390033006B7309 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		916E134C2534356200D340A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		916E134F2534359200D340A0 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
-		916E135D25343C4400D340A0 /* DogTinderTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DogTinderTests; path = "../../../../../../../../Desktop/223/project-pog_dog/dog tinder/DogTinderTests"; sourceTree = BUILT_PRODUCTS_DIR; };
+		916E135D25343C4400D340A0 /* DogTinderTests */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = DogTinderTests; path = "dog tinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		916E135F25343C4400D340A0 /* dog_tinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dog_tinderTests.swift; sourceTree = "<group>"; };
 		916E136125343C4400D340A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		916E137125343CFE00D340A0 /* DogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTests.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				222BBCB1253139D600FA19DD /* HomeView.swift */,
 				222BBCB0253139D600FA19DD /* UserProfileView.swift */,
 				916E134C2534356200D340A0 /* User.swift */,
+				916015B525390033006B7309 /* Database.swift */,
 				916E134F2534359200D340A0 /* Dog.swift */,
 				22501EAE252FAC4000A58C46 /* ContentView.swift */,
 				22501EB0252FAC4200A58C46 /* Assets.xcassets */,
@@ -227,6 +230,7 @@
 				916E134D2534356200D340A0 /* User.swift in Sources */,
 				222BBCB5253139D600FA19DD /* HomeView.swift in Sources */,
 				222BBCB6253139D600FA19DD /* ChatView.swift in Sources */,
+				916015B625390033006B7309 /* Database.swift in Sources */,
 				222BBCB4253139D600FA19DD /* UserProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

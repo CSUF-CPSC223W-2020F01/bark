@@ -8,10 +8,6 @@
     //includes: text fields (name, city, state), toggle boxes (availibility: morning, noon, night), and adding and deleting the list of dog objects (name for now)
 
 import SwiftUI
-var pompom: Dog = Dog(name: "Pebbles", breed: "Pomeranian", temperament: "Lazy", size: "12' ", weight: 15 , description: "Lazy but funny ")
-var husky: Dog = Dog(name: "Dot", breed: "husky", temperament: "Active", size: "24' ", weight: 100 , description: "Scary looking but nice")
-
-var user: User = User(firstName:"Miguel", lastName: "Lee", city: "Fontana", state: "California", morning: true, afterNoon: true, night: true, listOfDogs: [])
 
 struct UserProfileView: View {
     @ObservedObject var profile: User = user
