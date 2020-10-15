@@ -1,3 +1,4 @@
+
 // USER VIEW
 // IMPLEMENTATION 1 TO DO:
 
@@ -8,8 +9,9 @@
 
 import SwiftUI
 var pompom: Dog = Dog(name: "Pebbles", breed: "Pomeranian", temperament: "Lazy", size: "12' ", weight: 15 , description: "Lazy but funny ")
+var husky: Dog = Dog(name: "Dot", breed: "husky", temperament: "Active", size: "24' ", weight: 100 , description: "Scary looking but nice")
 
-var user: User = User(firstName:"Miguel", lastName: "Lee", city: "Fontana", state: "California", morning: true, afterNoon: true, night: true, Dog: pompom)
+var user: User = User(firstName:"Miguel", lastName: "Lee", city: "Fontana", state: "California", morning: true, afterNoon: true, night: true, listOfDogs: [])
 
 struct UserProfileView: View {
     @ObservedObject var profile: User = user
@@ -46,6 +48,9 @@ struct UserProfileView: View {
                         }
                     }
                 }
+                ForEach(profile.listOfDogs,id:\.id) {dog in
+                    Text(dog.name)
+                }
             }.padding()
             }.buttonStyle(DefaultButtonStyle())
         .navigationBarTitle("Your Profile")
@@ -56,9 +61,9 @@ struct UserProfileView: View {
 
 
 struct EditView: View {
-    @State  var profile: User
-        
+    @ObservedObject  var profile: User
     var body: some View {
+        Form {
             VStack(alignment: .leading, spacing:5){
                   Text("First Name")
                           .font(.callout)
@@ -79,7 +84,9 @@ struct EditView: View {
                           .font(.callout)
                           .bold()
                       TextField("\(profile.state)",text: $profile.state) .textFieldStyle(RoundedBorderTextFieldStyle())
-                  Group{
+            }
+                VStack {
+                    Group{
                           Toggle(isOn: $profile.morning){
                               Text("Morning")
                           }
@@ -90,30 +97,29 @@ struct EditView: View {
                               Text("Night")
                           }
                   }
-                // will use this code to create the view for dogs
-//                        NavigationView {
-//                            List {
-//                                ForEach(profile.dog.name, id: \.self) {dogName in
-//                                    Text(dogName)
-//                                }
-//                            }
-//                            .navigationBarTitle(Text(""))
-//                            .navigationBarItems(trailing: Button(action: {
-//                                self.addRow()
-//                            }) {
-//                                Image(systemName: "plus")
-//                            })
-//                        }
-//                    }
-                
-//                    private func addRow() {
-                //add row function needs to be able to append a dog object. default is
-                //var defaultDog: Dog = = Dog(name: "Dog name", breed: "a good dog", temperament: "good", size: "6' ", weight: 12 , description: "very good dog")
-//                        self.locations.append(defaultDog)
-//                    }
+            }
+            VStack {
+                List {
+                    ForEach(profile.listOfDogs,id:\.id) {dog in
+                        Text(dog.name)
+                    }
+                    .onDelete(perform: delete)
+                    Button("Add Dog", action: addRow).buttonStyle(BorderlessButtonStyle())
+                }
+            }
     }
+    }
+    func addRow() {
+        // add row function needs to be able to append a dog object. default is
+        let defaultDog: Dog = Dog(name: "Dog name", breed: "a good dog", temperament: "good", size: "6' ", weight: 12 , description: "very good dog")
+        profile.listOfDogs.append(defaultDog)
+     }
+    func delete(at offsets: IndexSet) {
+            profile.listOfDogs.remove(atOffsets: offsets)
     }
 }
+
+
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
         Group {

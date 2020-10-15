@@ -1,3 +1,4 @@
+//user.swift
 //
 //  User.swift
 //  dog tinder
@@ -16,7 +17,7 @@ class User : ObservableObject {
   @Published  var night: Bool = false
   @Published  var listOfDogs: [Dog] = []
     
-    init(firstName: String, lastName: String, city: String, state: String, morning: Bool, afterNoon: Bool, night: Bool, Dog: Dog){
+    init(firstName: String, lastName: String, city: String, state: String, morning: Bool, afterNoon: Bool, night: Bool, listOfDogs: [Dog]){
         self.firstName = firstName
         self.lastName = lastName
         self.city = city
@@ -24,6 +25,6 @@ class User : ObservableObject {
         self.morning = morning
         self.afterNoon = afterNoon
         self.night = night
-        self.listOfDogs += [Dog]
+        self.listOfDogs += []
     }
 }

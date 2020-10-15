@@ -1,3 +1,4 @@
+//dog.swift
 //
 //  Dog.swift
 //  dog tinder
@@ -6,11 +7,12 @@
 //
 
 import Foundation
-struct Dog  {
+struct Dog : Identifiable {
+    var id = UUID()
     var name: String
     var breed: String
     var temperament: String
-    var size: String?
-    var weight: Int?
-    var description: String?
+    var size: String
+    var weight: Int
+    var description: String
 }
