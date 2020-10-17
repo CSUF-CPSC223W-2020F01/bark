@@ -57,6 +57,7 @@ struct UserProfileView: View {
 struct EditView: View {
     @ObservedObject var profile: User
     var body: some View {
+        //removed Form{} wrapper around the stacks. it just made things look funnyS
         VStack(alignment: .leading, spacing: 5) {
             Text("First Name")
                 .font(.callout)
