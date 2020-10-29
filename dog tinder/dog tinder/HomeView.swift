@@ -22,8 +22,8 @@ struct HomeView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(profile.listOfDogs, id: \.id) { dog in
-                        NavigationLink(destination: detailedView(dog:dog)) {
-                            dogCard(dog:dog)
+                        NavigationLink(destination: detailedView(dog: dog)) {
+                            dogCard(dog: dog)
                         }.padding(0)
                     }
                 }
@@ -38,47 +38,47 @@ struct detailedView: View {
     var body: some View {
         VStack {
             Image(dog.image)
-        VStack(alignment: .leading){
-            Image(image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .cornerRadius(10)
-                .padding(20)
-                .frame(maxWidth: .infinity, alignment: .center)
-        HStack {
-
-            VStack {
-                Text(dog.name)
-                    .font(.system(size: 32, weight: .bold, design: .default))
-                    .foregroundColor(.black)
-                Text(dog.breed)
-                    .font(.system(size: 18, weight: .bold, design: .default))
-                    .foregroundColor(.gray)
-                Text(dog.gender)
-                    .font(.system(size: 18, weight: .bold, design: .default))
-                    .foregroundColor(.gray)
-                Text(dog.temperament)
-                    .font(.system(size: 18, weight: .bold, design: .default))
-                    .foregroundColor(.gray)
-                Text(dog.size)
-                    .font(.system(size: 18, weight: .bold, design: .default))
-                    .foregroundColor(.gray)
-                Text("\(dog.weight) pounds")
-                    .font(.system(size: 18, weight: .bold, design: .default))
-                    .foregroundColor(.gray)
-                Text(dog.description)
-                    .font(.system(size: 16, weight: .bold, design: .default))
-                    .foregroundColor(.gray)
-            }.layoutPriority(100)
-            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+            VStack(alignment: .leading) {
+                Image(dog.image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(10)
+                    .padding(20)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                HStack {
+                    VStack {
+                        Text(dog.name)
+                            .font(.system(size: 32, weight: .bold, design: .default))
+                            .foregroundColor(.black)
+                        Text(dog.breed)
+                            .font(.system(size: 18, weight: .bold, design: .default))
+                            .foregroundColor(.gray)
+                        Text(dog.gender)
+                            .font(.system(size: 18, weight: .bold, design: .default))
+                            .foregroundColor(.gray)
+                        Text(dog.temperament)
+                            .font(.system(size: 18, weight: .bold, design: .default))
+                            .foregroundColor(.gray)
+                        Text(dog.size)
+                            .font(.system(size: 18, weight: .bold, design: .default))
+                            .foregroundColor(.gray)
+                        Text("\(dog.weight) pounds")
+                            .font(.system(size: 18, weight: .bold, design: .default))
+                            .foregroundColor(.gray)
+                        Text(dog.description)
+                            .font(.system(size: 16, weight: .bold, design: .default))
+                            .foregroundColor(.gray)
+                    }.layoutPriority(100)
+                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                }
+                Spacer()
+            }
         }
-        Spacer()
-    }
     }
 }
 
 struct dogCard: View {
-   @ObservedObject var dog: Dog
+    @ObservedObject var dog: Dog
 
     var body: some View {
         VStack(alignment: .center) {
@@ -108,8 +108,9 @@ struct dogCard: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        detailedView(image: "pompom", name: "Pebbles", breed: "Pomeranian", gender: "F", temperament: "Lazy", size: "7' ", weight: 5 , description: "Lazy but funny ")
-    }
-}
+//
+// struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        detailedView(image: "pompom", name: "Pebbles", breed: "Pomeranian", gender: "F", temperament: "Lazy", size: "7' ", weight: 5 , description: "Lazy but funny ")
+//    }
+// }
