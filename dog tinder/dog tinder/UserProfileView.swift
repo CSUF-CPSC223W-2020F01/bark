@@ -112,7 +112,7 @@ struct EditView: View {
 
     func addRow() {
         // add row function needs to be able to append a dog object. default is
-        let defaultDog = Dog(name: "Dog name", breed: "a good dog", temperament: "good", size: "6' ", weight: 12, description: "very good dog")
+        let defaultDog = Dog(image: "dog", name: "Dog name", breed: "a good dog", gender: "F", temperament: "good", size: "6' ", weight: 12, description: "very good dog")
         profile.listOfDogs.append(defaultDog)
     }
 
