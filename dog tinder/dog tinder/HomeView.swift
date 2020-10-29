@@ -43,7 +43,7 @@ struct detailedView: View {
     var weight: Int
     var description: String
     var body: some View {
-        VStack {
+        VStack(alignment: .leading){
             Image(image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
@@ -51,29 +51,24 @@ struct detailedView: View {
                 .padding(20)
                 .frame(maxWidth: .infinity, alignment: .center)
         HStack {
-            VStack {
+            VStack(alignment:.leading){
                 Text(name)
                     .font(.system(size: 32, weight: .bold, design: .default))
                     .foregroundColor(.black)
-                Text(breed)
-                    .font(.system(size: 18, weight: .bold, design: .default))
-                    .foregroundColor(.gray)
-                Text(gender)
-                    .font(.system(size: 18, weight: .bold, design: .default))
+                Text("\(breed), \(gender)")
+                    .font(.system(size: 16, weight: .regular, design: .default))
                     .foregroundColor(.gray)
                 Text(temperament)
-                    .font(.system(size: 18, weight: .bold, design: .default))
+                    .font(.system(size: 16, weight: .regular, design: .default))
                     .foregroundColor(.gray)
-                Text(size)
-                    .font(.system(size: 18, weight: .bold, design: .default))
-                    .foregroundColor(.gray)
-                Text("\(weight) pounds")
-                    .font(.system(size: 18, weight: .bold, design: .default))
+                Text("\(size), \(weight) pounds")
+                    .font(.system(size: 16, weight: .regular, design: .default))
                     .foregroundColor(.gray)
                 Text(description)
-                    .font(.system(size: 16, weight: .bold, design: .default))
+                    .font(.system(size: 16, weight: .regular, design: .default))
                     .foregroundColor(.gray)
             }.layoutPriority(100)
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
         }
         Spacer()
     }
@@ -116,6 +111,6 @@ struct dogCard: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        detailedView(image: "pompom", name: "Pebbles", breed: "Pomeranian", gender: "F", temperament: "Lazy", size: "7' ", weight: 5 , description: "Lazy but funny ")
     }
 }
