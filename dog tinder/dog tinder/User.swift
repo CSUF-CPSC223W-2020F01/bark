@@ -7,7 +7,11 @@
 //
 
 import Foundation
+import UIKit
+import SwiftUI
+
 class User : ObservableObject {
+  @Published  var userImage: String
   @Published  var firstName: String = "John"
   @Published  var lastName: String = "Smith"
   @Published  var city: String = "NYC"
@@ -25,6 +29,7 @@ class User : ObservableObject {
         self.morning = morning
         self.afterNoon = afterNoon
         self.night = night
+        self.userImage = "MiguelLee"
         self.listOfDogs.append(contentsOf: listOfDogs)
     }
 }
