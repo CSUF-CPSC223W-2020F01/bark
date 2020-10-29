@@ -37,7 +37,7 @@ struct detailedView: View {
     @ObservedObject var dog: Dog
     var body: some View {
         VStack {
-            Image(dog.image)
+//            Image(dog.image)
             VStack(alignment: .leading) {
                 Image(dog.image)
                     .resizable()
