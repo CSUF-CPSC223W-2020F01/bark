@@ -22,8 +22,8 @@ struct HomeView: View {
             ScrollView {
                 LazyVStack {
                     ForEach(profile.listOfDogs, id: \.id) { dog in
-                        NavigationLink(destination: detailedView(image: dog.image, name: dog.name, breed: dog.breed, gender: dog.gender, temperament: dog.temperament, size: dog.size, weight: dog.weight, description: dog.description)) {
-                            dogCard(image: dog.image, name: dog.name, breed: dog.breed, gender: dog.gender)
+                        NavigationLink(destination: detailedView(dog:dog)) {
+                            dogCard(dog:dog)
                         }.padding(0)
                     }
                 }
@@ -34,17 +34,10 @@ struct HomeView: View {
 }
 
 struct detailedView: View {
-    var image: String
-    var name: String
-    var breed: String
-    var gender: String
-    var temperament: String
-    var size: String
-    var weight: Int
-    var description: String
+    @ObservedObject var dog: Dog
     var body: some View {
         VStack {
-            Image(image)
+            Image(dog.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(10)
@@ -52,25 +45,25 @@ struct detailedView: View {
                 .frame(maxWidth: .infinity, alignment: .center)
         HStack {
             VStack {
-                Text(name)
+                Text(dog.name)
                     .font(.system(size: 32, weight: .bold, design: .default))
                     .foregroundColor(.black)
-                Text(breed)
+                Text(dog.breed)
                     .font(.system(size: 18, weight: .bold, design: .default))
                     .foregroundColor(.gray)
-                Text(gender)
+                Text(dog.gender)
                     .font(.system(size: 18, weight: .bold, design: .default))
                     .foregroundColor(.gray)
-                Text(temperament)
+                Text(dog.temperament)
                     .font(.system(size: 18, weight: .bold, design: .default))
                     .foregroundColor(.gray)
-                Text(size)
+                Text(dog.size)
                     .font(.system(size: 18, weight: .bold, design: .default))
                     .foregroundColor(.gray)
-                Text("\(weight) pounds")
+                Text("\(dog.weight) pounds")
                     .font(.system(size: 18, weight: .bold, design: .default))
                     .foregroundColor(.gray)
-                Text(description)
+                Text(dog.description)
                     .font(.system(size: 16, weight: .bold, design: .default))
                     .foregroundColor(.gray)
             }.layoutPriority(100)
@@ -81,25 +74,22 @@ struct detailedView: View {
 }
 
 struct dogCard: View {
-    var image: String
-    var name: String
-    var breed: String
-    var gender: String
+   @ObservedObject var dog: Dog
 
     var body: some View {
         VStack(alignment: .center) {
-            Image(image)
+            Image(dog.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(10)
                 .padding(20)
             HStack {
                 VStack(alignment: .leading) {
-                    Text(name)
+                    Text(dog.name)
                         .font(.system(size: 26, weight: .bold, design: .default))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .center)
-                    Text("\(breed), \(gender)")
+                    Text("\(dog.breed), \(dog.gender)")
                         .font(.system(size: 16, weight: .bold, design: .default))
                         .foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .center)
