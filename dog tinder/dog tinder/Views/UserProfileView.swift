@@ -69,8 +69,8 @@ struct UserProfileView: View {
                 ScrollView {
                     LazyVStack {
                         ForEach(profile.listOfDogs, id: \.id) { dog in
-                            NavigationLink(destination: detailedView(dog:dog)) {
-                                dogCard(dog:dog)
+                            NavigationLink(destination: detailedViewSimple(dog:dog)) {
+                                SmallDogCard(dog:dog)
                             }.padding(0)
                         }
                     }
