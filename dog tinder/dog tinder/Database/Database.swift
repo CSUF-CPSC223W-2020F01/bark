@@ -12,4 +12,8 @@ var bulldog: Dog = Dog(image: "englishbulldog", name: "Bobbie", breed: "English 
 var goldie: Dog = Dog(image: "goldie", name: "Big Boy", breed: "Golden Retriever", gender: "F", temperament: "Active", size: "22' ", weight: 65 , description: "Scary looking but nice")
 
 
-var user: User = User(firstName:"Miguel", lastName: "Lee", city: "Fontana", state: "California", morning: true, afterNoon: true, night: true, listOfDogs: [pompom, husky, bulldog, goldie])
+var user: User = User(firstName:"Miguel", lastName: "Lee", city: "Fontana", state: "California", morning: true, afterNoon: true, night: true, listOfDogs: [pompom, husky])
+var user2: User = User(firstName:"Blue", lastName: "Bayani", city: "Fremon", state: "California", morning: true, afterNoon: true, night: true, listOfDogs: [bulldog, goldie])
+
+var userArr: [User] = [user,user2]
+
