@@ -25,7 +25,7 @@ struct LargeDogCard: View {
                         .font(.system(size: 26, weight: .bold, design: .default))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .center)
-                    Text("\(dog.breed), \(dog.gender)")
+                    Text("\(dog.breed.rawValue), \(dog.gender.rawValue)")
                         .font(.system(size: 16, weight: .bold, design: .default))
                         .foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -36,7 +36,7 @@ struct LargeDogCard: View {
         .frame(maxWidth: .infinity, alignment: .center)
         .background(Color.white)
         .modifier(CardModifier())
-        .padding(.all, 10)
+        .padding(EdgeInsets(top: 12, leading: 32, bottom: 12, trailing: 32))
     }
 }
 

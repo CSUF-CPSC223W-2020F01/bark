@@ -25,7 +25,7 @@ struct SmallDogCard: View {
                         .font(.system(size: 26, weight: .bold, design: .default))
                         .foregroundColor(.black)
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    Text("\(dog.breed), \(dog.gender)")
+                    Text("\(dog.breed.rawValue), \(dog.gender.rawValue)")
                         .font(.system(size: 16, weight: .bold, design: .default))
                         .foregroundColor(.gray)
                         .frame(maxWidth: .infinity, alignment: .leading)

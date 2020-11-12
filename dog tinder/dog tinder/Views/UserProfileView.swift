@@ -14,72 +14,40 @@ struct UserProfileView: View {
 
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading) {
-                HStack(alignment: .top) {
+            ScrollView {
+                VStack(alignment: .center) {
                     Image("\(profile.userImage)")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 120, height: 120)
+                        .frame(width: 144, height: 144)
                         .clipShape(Circle())
                         .padding()
-                        .shadow(radius: 10)
                         .clipped()
-                    Spacer()
-                    VStack(alignment: .leading) {
-                        Text("\(profile.firstName), \(profile.lastName)")
-                        Text("\(profile.city), \(profile.state)")
-                        if profile.morning && profile.afterNoon && profile.night {
-                            Text("Availability: All day")
-                        }
-                        else {
-                            if profile.morning && profile.afterNoon {
-                                Text("Availability: Morning and afternoon")
-                            }
-                            if profile.morning && profile.night {
-                                Text("Availability: Morning and night")
-                            }
-                            if profile.afterNoon && profile.night {
-                                Text("Availability: Afternoon and night")
-                            }
-                            else {
-                                if profile.morning && !profile.afterNoon && !profile.night {
-                                    Text("Availability: Morning")
-                                }
-                                if profile.afterNoon && !profile.morning && !profile.night {
-                                    Text("Availability: Afternoon")
-                                }
-                                if profile.night && !profile.afterNoon && !profile.morning {
-                                    Text("Availability: Night")
-                                }
-                            }
-                        }
-                    }
-                    .overlay(RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color.gray, lineWidth: 2)
-                        .frame(width: 200, height: 100))
-                    .shadow(radius: 1)
-                    .padding()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    Text("\(profile.firstName), \(profile.lastName)")
+                        .font(.system(size: 24, weight: .bold, design: .default))
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(.black)
+                        .padding(.bottom, 4)
+                    Text("\(profile.city), \(profile.state)")
+                        .font(.system(size: 16, weight: .bold, design: .default))
+                        .frame(maxWidth: .infinity, alignment: .center)
+                        .foregroundColor(.gray)
                 }
-                .frame(width: 350, height: 100)
-                .padding([.top, .trailing])
-                .navigationBarItems(trailing: HStack { AddButton(destination: EditView(profile: profile)) })
-                .groupBoxStyle(/*@START_MENU_TOKEN@*/DefaultGroupBoxStyle()/*@END_MENU_TOKEN@*/)
                 Spacer()
-                ScrollView {
-                    LazyVStack {
-                        ForEach(profile.listOfDogs, id: \.id) { dog in
-                            NavigationLink(destination: detailedViewSimple(dog:dog)) {
-                                SmallDogCard(dog:dog)
-                            }.padding(0)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200, alignment: .center)
+                    .padding(.bottom, 10)
+                    .navigationBarItems(trailing: HStack { AddButton(destination: EditView(profile: profile)) })
+                    .groupBoxStyle(/*@START_MENU_TOKEN@*/DefaultGroupBoxStyle()/*@END_MENU_TOKEN@*/)
+                LazyVStack {
+                    ForEach(profile.listOfDogs, id: \.id) { dog in
+                        NavigationLink(destination: detailedViewSimple(dog: dog)) {
+                            SmallDogCard(dog: dog)
                         }
                     }
-                } // .border(Color.yellow)
-                .padding(.top)
-            }.padding(.trailing)
-                .navigationBarTitle("Profile")
+                }
+            }
+            .navigationBarTitle("Profile")
         }.frame(maxWidth: .infinity, maxHeight: .infinity)
-        // .border(Color.black)
     }
 }
 
@@ -87,9 +55,9 @@ struct EditView: View {
     @ObservedObject var profile: User
     var body: some View {
         // removed Form{} wrapper around the stacks. it just made things look funnyS
-        NavigationView {
-            VStack(alignment: .leading, spacing: 5) {
-                ScrollView {
+        
+            /*VStack(alignment: .leading, spacing: 5)*/ Form{
+                Section(header: Text("Your profile")){
                     Text("First Name")
                         .font(.callout)
                         .bold()
@@ -110,27 +78,14 @@ struct EditView: View {
                         .bold()
                     TextField("\(profile.state)", text: $profile.state).textFieldStyle(RoundedBorderTextFieldStyle())
                 }
-                VStack {
-                    Group {
-                        Toggle(isOn: $profile.morning) {
-                            Text("Morning")
-                        }
-                        Toggle(isOn: $profile.afterNoon) {
-                            Text("Afternoon")
-                        }
-                        Toggle(isOn: $profile.night) {
-                            Text("Night")
-                        }
-                    }
-                }
-                Spacer()
+                
+                Section(header: Text("Your Fluffy Animals")){
                 List {
                     ForEach(profile.listOfDogs, id: \.id) { dog in
-                        NavigationLink(destination: EditDog(dog: dog)) {
+                        NavigationLink(destination: EditDog(profile: profile, dog: dog)) {
                             Text(dog.name)
                         }
                     }
-
                     .onDelete(perform: delete)
                     .onTapGesture(perform: {
                         print("Pressed")
@@ -140,24 +95,29 @@ struct EditView: View {
                         // NavigationLink(destination: EditDog(dog:dog)){}
                         // }
                     })
+                    
+                    Button(action:{
+                        addRow(profile: profile)
+                    }){
+                        Text("Register A New Dog")
+                    }
                 }
-                Spacer()
-                    .navigationBarTitle(Text("Edit Profile"))
-                    .navigationBarHidden(true)
+                    Spacer()
+                .navigationBarTitle(Text("Edit Profile"))
+                }
             }
         }
-    }
-
-    func addRow() {
-        // add row function needs to be able to append a dog object. default is
-        let defaultDog = Dog(image: "dog", name: "Dog name", breed: "a good dog", gender: "F", temperament: "good", size: "6' ", weight: 12, description: "very good dog")
-        profile.listOfDogs.append(defaultDog)
-    }
-
+    
     func delete(at offsets: IndexSet) {
         profile.listOfDogs.remove(atOffsets: offsets)
     }
 }
+
+    func addRow(profile: User) {
+        // add row function needs to be able to append a dog object. default is
+        let defaultDog = Dog(image: "dog", name: "Dog name", breed: .Pomeranian, gender: .male, temperament: "good", size: .small, weight: "12", description: "very good dog")
+        profile.listOfDogs.append(defaultDog)
+    }
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
@@ -180,26 +140,70 @@ struct AddButton<Destination: View>: View {
 }
 
 struct EditDog: View {
+    @ObservedObject var profile: User
     @ObservedObject var dog: Dog
+    @State private var showCancelButton: Bool = false
     var body: some View {
-        NavigationView {
-            VStack(alignment: .center) {
-                TextField("\(dog.name)", text: $dog.name)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("\(dog.breed)", text: $dog.breed)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("\(dog.gender)", text: $dog.gender)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("\(dog.temperament)", text: $dog.temperament)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("\(dog.size)", text: $dog.size)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    // TextField("\(dog.weight)", text: Int($dog.weight))
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                TextField("\(dog.description)", text: $dog.description)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
+        ZStack(alignment: .bottomTrailing){
+            Image(dog.image)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(10)
+                .padding()
+            Button(action: {print("Button pressed")} ){
+                Image(systemName: "pencil")
+                    .background(Circle()
+                                    .fill(Color.white)
+                                    .frame(width:50, height: 50)
+                    )
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                    .frame(width: 100, height: 100)
+                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             }
-            .padding(.bottom)
-        }.navigationTitle("Edit \(dog.name)")
+                
+        }
+            Form{
+                TextField("Dog Name", text: $dog.name)
+                    //.textFieldStyle(RoundedBorderTextFieldStyle())
+                Picker("Breed", selection: $dog.breed){
+                    ForEach(Breed.allCases, id: \.self){ breed in
+                        Text(breed.rawValue)
+                    }
+                }
+                
+                Picker("Gender", selection: $dog.gender){
+                    ForEach(Gender.allCases, id: \.self){ gender in
+                        Text(gender.rawValue)
+                    }
+                }
+                TextField("Temperament", text: $dog.temperament)
+                
+                Picker("Size", selection: ($dog.size)){
+                ForEach(Size.allCases, id: \.self){ size in
+                    Text(size.rawValue)
+                    }
+                }
+                TextField("Weight", text: $dog.weight)
+                    .keyboardType(.numberPad)
+                TextField("Description", text: $dog.description)
+                    
+            }
+            //.padding(EdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16))
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationTitle("Edit \(dog.name)")
+        //}
     }
 }
+
+func editPhoto(){
+    
+}
+
+extension UIApplication{
+    func endEditing(_ force: Bool){
+        self.windows
+            .first?
+            .endEditing(force)
+    }
+}
+    

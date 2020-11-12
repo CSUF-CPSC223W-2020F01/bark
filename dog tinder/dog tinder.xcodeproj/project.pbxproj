@@ -419,6 +419,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"dog tinder/Preview Content\"";
+				DEVELOPMENT_TEAM = ULQSMTMH47;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "dog tinder/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -426,7 +427,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dog-tinder";
+				PRODUCT_BUNDLE_IDENTIFIER = Dog.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -440,6 +441,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"dog tinder/Preview Content\"";
+				DEVELOPMENT_TEAM = ULQSMTMH47;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "dog tinder/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -447,7 +449,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dog-tinder";
+				PRODUCT_BUNDLE_IDENTIFIER = Dog.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
