@@ -18,6 +18,7 @@
 		22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501EAE252FAC4000A58C46 /* ContentView.swift */; };
 		22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB0252FAC4200A58C46 /* Assets.xcassets */; };
 		22501EB4252FAC4200A58C46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */; };
+		40D187FB256C613500F26FA1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D187FA256C613500F26FA1 /* LoginView.swift */; };
 		916015B625390033006B7309 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916015B525390033006B7309 /* Database.swift */; };
 		916E134D2534356200D340A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E134C2534356200D340A0 /* User.swift */; };
 		916E13502534359200D340A0 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E134F2534359200D340A0 /* Dog.swift */; };
@@ -50,6 +51,7 @@
 		22501EB0252FAC4200A58C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22501EB5252FAC4200A58C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40D187FA256C613500F26FA1 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = ../../../../../Documents/barky/barky/Views/LoginView.swift; sourceTree = "<group>"; };
 		916015B525390033006B7309 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		916E134C2534356200D340A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		916E134F2534359200D340A0 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 			children = (
 				222BBCB0253139D600FA19DD /* UserProfileView.swift */,
 				222BBCB1253139D600FA19DD /* HomeView.swift */,
+				40D187FA256C613500F26FA1 /* LoginView.swift */,
 				222BBCB2253139D600FA19DD /* ChatView.swift */,
 			);
 			path = Views;
@@ -270,6 +273,7 @@
 				222BBCB5253139D600FA19DD /* HomeView.swift in Sources */,
 				2222B42B254CF3C0006A067C /* CardModifier.swift in Sources */,
 				222BBCB6253139D600FA19DD /* ChatView.swift in Sources */,
+				40D187FB256C613500F26FA1 /* LoginView.swift in Sources */,
 				916015B625390033006B7309 /* Database.swift in Sources */,
 				222BBCB4253139D600FA19DD /* UserProfileView.swift in Sources */,
 			);
