@@ -18,20 +18,14 @@ class User: Identifiable, ObservableObject {
     @Published var city: String = "NYC"
     @Published var state: String = "NY"
     @Published var email: String
-    @Published var morning: Bool = false
-    @Published var afterNoon: Bool = false
-    @Published var night: Bool = false
     @Published var listOfDogs: [Dog] = []
 
-    init(firstName: String, lastName: String, city: String, state: String, email: String, morning: Bool, afterNoon: Bool, night: Bool, listOfDogs: [Dog]) {
+    init(firstName: String, lastName: String, city: String, state: String, email: String, listOfDogs: [Dog]) {
         self.firstName = firstName
         self.lastName = lastName
         self.city = city
         self.state = state
         self.email = email
-        self.morning = morning
-        self.afterNoon = afterNoon
-        self.night = night
         self.userImage = "MiguelLee"
         self.listOfDogs.append(contentsOf: listOfDogs)
     }
