@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import dog_tinder
 
 class UserTests: XCTestCase {
 
@@ -27,6 +28,17 @@ class UserTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    func testUser() {
+        var user2: User = User(firstName:"Blue", lastName: "Bayani", city: "Fremon", state: "California", email: "blueb@gmail.com", morning: true, afterNoon: true, night: true, listOfDogs: [bulldog, goldie])
+        XCTAssertEqual(user2.firstName, "Blue")
+        XCTAssertEqual(user2.lastName, "Bayani")
+        XCTAssertEqual(user2.city, "Fremon")
+        XCTAssertEqual(user2.state, "California")
+        XCTAssertEqual(user2.email, "blueb@gmail.com")
+        XCTAssertEqual(user2.morning, true)
+        XCTAssertEqual(user2.afterNoon, true)
+        XCTAssertEqual(user2.night, true)
     }
 
 }
