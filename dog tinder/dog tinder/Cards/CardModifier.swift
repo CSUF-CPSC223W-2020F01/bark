@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
+//this code gives each card a radius of 20 and a shadow
 struct CardModifier: ViewModifier {
     func body(content: Content) -> some View {
         content

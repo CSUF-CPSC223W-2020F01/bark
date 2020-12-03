@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
+//displays a summary of the dog's information on a large card. used on the home page
 struct LargeDogCard: View {
     @ObservedObject var dog: Dog
 
@@ -39,5 +40,3 @@ struct LargeDogCard: View {
         .padding(EdgeInsets(top: 12, leading: 32, bottom: 12, trailing: 32))
     }
 }
-
-

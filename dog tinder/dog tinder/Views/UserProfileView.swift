@@ -36,9 +36,11 @@ struct UserProfileView: View {
                 Spacer()
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: 200, alignment: .center)
                     .padding(.bottom, 10)
+                    //places the edit icon in the upper right corner
                     .navigationBarItems(trailing: HStack { AddButton(destination: EditView(profile: profile)) })
                     .groupBoxStyle(/*@START_MENU_TOKEN@*/DefaultGroupBoxStyle()/*@END_MENU_TOKEN@*/)
                 LazyVStack {
+                    //displays all of the users dogs
                     ForEach(profile.listOfDogs, id: \.id) { dog in
                         NavigationLink(destination: detailedViewSimple(dog: dog)) {
                             SmallDogCard(dog: dog)
@@ -51,73 +53,72 @@ struct UserProfileView: View {
     }
 }
 
+//called when the edit icon is clicked
+//allows users to edit their profile details
 struct EditView: View {
     @ObservedObject var profile: User
     var body: some View {
-        // removed Form{} wrapper around the stacks. it just made things look funnyS
-        
-            /*VStack(alignment: .leading, spacing: 5)*/ Form{
-                Section(header: Text("Your profile")){
-                    Text("First Name")
-                        .font(.callout)
-                        .bold()
-                    TextField("\(profile.firstName)", text: $profile.firstName)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    Text("Last Name")
-                        .font(.callout)
-                        .bold()
-                    TextField("\(user.lastName)", text: $profile.lastName)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    Text("City")
-                        .font(.callout)
-                        .bold()
-                    TextField("\(profile.city)", text: $profile.city)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                    Text("State")
-                        .font(.callout)
-                        .bold()
-                    TextField("\(profile.state)", text: $profile.state).textFieldStyle(RoundedBorderTextFieldStyle())
-                }
-                
-                Section(header: Text("Your Fluffy Animals")){
+        Form {
+            Section(header: Text("Your profile")) {
+                Text("First Name")
+                    .font(.callout)
+                    .bold()
+                TextField("\(profile.firstName)", text: $profile.firstName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Text("Last Name")
+                    .font(.callout)
+                    .bold()
+                TextField("\(user.lastName)", text: $profile.lastName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Text("City")
+                    .font(.callout)
+                    .bold()
+                TextField("\(profile.city)", text: $profile.city)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                Text("State")
+                    .font(.callout)
+                    .bold()
+                TextField("\(profile.state)", text: $profile.state).textFieldStyle(RoundedBorderTextFieldStyle())
+            }
+            
+            //users can also edit their dogs
+            Section(header: Text("Your Fluffy Animals")) {
                 List {
+                    //lists all dogs by their name
                     ForEach(profile.listOfDogs, id: \.id) { dog in
+                        //when clicked, takes the user to a new view where they can edit that particular dog's details
                         NavigationLink(destination: EditDog(profile: profile, dog: dog)) {
                             Text(dog.name)
                         }
                     }
+                    //swipe to delete
                     .onDelete(perform: delete)
                     .onTapGesture(perform: {
                         print("Pressed")
-                        // NavigationLink(destination: EditDog(dog:user.listOfDogsp[$0])){}
-
-                        // ForEach(profile.listOfDogs, id: \.id) { dog in
-                        // NavigationLink(destination: EditDog(dog:dog)){}
-                        // }
                     })
-                    
-                    Button(action:{
+                    //add a new dog entry
+                    Button(action: {
                         addRow(profile: profile)
-                    }){
+                    }) {
                         Text("Register A New Dog")
                     }
                 }
-                    Spacer()
-                .navigationBarTitle(Text("Edit Profile"))
-                }
+                Spacer()
+                    .navigationBarTitle(Text("Edit Profile"))
             }
         }
-    
+    }
+
     func delete(at offsets: IndexSet) {
         profile.listOfDogs.remove(atOffsets: offsets)
     }
 }
 
-    func addRow(profile: User) {
-        // add row function needs to be able to append a dog object. default is
-        let defaultDog = Dog(image: "dog", name: "Dog name", breed: .Pomeranian, gender: .male, temperament: "good", size: .small, weight: "12", description: "very good dog")
-        profile.listOfDogs.append(defaultDog)
-    }
+func addRow(profile: User) {
+    // add row function needs to be able to append a dog object. default is
+    let defaultDog = Dog(image: "dog", name: "Dog name", breed: .Pomeranian, gender: .male, temperament: "good", size: .small, weight: "12", description: "very good dog")
+    profile.listOfDogs.append(defaultDog)
+}
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
@@ -139,71 +140,68 @@ struct AddButton<Destination: View>: View {
     }
 }
 
+//called when a user clicks on a dog item from the edit view
+//allows users to edit the dogs information
 struct EditDog: View {
     @ObservedObject var profile: User
     @ObservedObject var dog: Dog
     @State private var showCancelButton: Bool = false
     var body: some View {
-        ZStack(alignment: .bottomTrailing){
+        ZStack(alignment: .bottomTrailing) {
             Image(dog.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(10)
                 .padding()
-            Button(action: {print("Button pressed")} ){
+            Button(action: { print("Button pressed") }) {
                 Image(systemName: "pencil")
                     .background(Circle()
-                                    .fill(Color.white)
-                                    .frame(width:50, height: 50)
+                        .fill(Color.white)
+                        .frame(width: 50, height: 50)
                     )
-                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(/*@START_MENU_TOKEN@*/ .blue/*@END_MENU_TOKEN@*/)
                     .frame(width: 100, height: 100)
                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             }
-                
         }
-            Form{
-                TextField("Dog Name", text: $dog.name)
-                    //.textFieldStyle(RoundedBorderTextFieldStyle())
-                Picker("Breed", selection: $dog.breed){
-                    ForEach(Breed.allCases, id: \.self){ breed in
-                        Text(breed.rawValue)
-                    }
+        Form {
+            TextField("Dog Name", text: $dog.name)
+            // .textFieldStyle(RoundedBorderTextFieldStyle())
+            Picker("Breed", selection: $dog.breed) {
+                ForEach(Breed.allCases, id: \.self) { breed in
+                    Text(breed.rawValue)
                 }
-                
-                Picker("Gender", selection: $dog.gender){
-                    ForEach(Gender.allCases, id: \.self){ gender in
-                        Text(gender.rawValue)
-                    }
-                }
-                TextField("Temperament", text: $dog.temperament)
-                
-                Picker("Size", selection: ($dog.size)){
-                ForEach(Size.allCases, id: \.self){ size in
-                    Text(size.rawValue)
-                    }
-                }
-                TextField("Weight", text: $dog.weight)
-                    .keyboardType(.numberPad)
-                TextField("Description", text: $dog.description)
-                    
             }
-            //.padding(EdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16))
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationTitle("Edit \(dog.name)")
-        //}
+
+            Picker("Gender", selection: $dog.gender) {
+                ForEach(Gender.allCases, id: \.self) { gender in
+                    Text(gender.rawValue)
+                }
+            }
+            TextField("Temperament", text: $dog.temperament)
+
+            Picker("Size", selection: $dog.size) {
+                ForEach(Size.allCases, id: \.self) { size in
+                    Text(size.rawValue)
+                }
+            }
+            TextField("Weight", text: $dog.weight)
+                .keyboardType(.numberPad)
+            TextField("Description", text: $dog.description)
+        }
+        // .padding(EdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16))
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationTitle("Edit \(dog.name)")
+        // }
     }
 }
 
-func editPhoto(){
-    
-}
+func editPhoto() {}
 
-extension UIApplication{
-    func endEditing(_ force: Bool){
-        self.windows
+extension UIApplication {
+    func endEditing(_ force: Bool) {
+        windows
             .first?
             .endEditing(force)
     }
 }
-    

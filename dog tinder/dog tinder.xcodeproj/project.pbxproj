@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2215F8DF257744E500059FD2 /* DetailedViewSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F8DE257744E500059FD2 /* DetailedViewSimple.swift */; };
+		2215F8E32577452200059FD2 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F8E22577452200059FD2 /* MailView.swift */; };
 		2222B427254CF35B006A067C /* LargeDogCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222B426254CF35B006A067C /* LargeDogCard.swift */; };
 		2222B42B254CF3C0006A067C /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222B42A254CF3C0006A067C /* CardModifier.swift */; };
 		2222B42F254CF3DC006A067C /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222B42E254CF3DC006A067C /* DetailedView.swift */; };
 		2222B433254CF434006A067C /* SmallDogCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222B432254CF434006A067C /* SmallDogCard.swift */; };
 		222BBCB4253139D600FA19DD /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BBCB0253139D600FA19DD /* UserProfileView.swift */; };
 		222BBCB5253139D600FA19DD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BBCB1253139D600FA19DD /* HomeView.swift */; };
-		222BBCB6253139D600FA19DD /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222BBCB2253139D600FA19DD /* ChatView.swift */; };
 		22501EAD252FAC4000A58C46 /* dog_tinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501EAC252FAC4000A58C46 /* dog_tinderApp.swift */; };
 		22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501EAE252FAC4000A58C46 /* ContentView.swift */; };
 		22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB0252FAC4200A58C46 /* Assets.xcassets */; };
@@ -38,13 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2215F8DE257744E500059FD2 /* DetailedViewSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewSimple.swift; sourceTree = "<group>"; };
+		2215F8E22577452200059FD2 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		2222B426254CF35B006A067C /* LargeDogCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeDogCard.swift; sourceTree = "<group>"; };
 		2222B42A254CF3C0006A067C /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
 		2222B42E254CF3DC006A067C /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
 		2222B432254CF434006A067C /* SmallDogCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallDogCard.swift; sourceTree = "<group>"; };
 		222BBCB0253139D600FA19DD /* UserProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserProfileView.swift; path = "dog tinder/Views/UserProfileView.swift"; sourceTree = SOURCE_ROOT; };
 		222BBCB1253139D600FA19DD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = "dog tinder/Views/HomeView.swift"; sourceTree = SOURCE_ROOT; };
-		222BBCB2253139D600FA19DD /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatView.swift; path = "dog tinder/Views/ChatView.swift"; sourceTree = SOURCE_ROOT; };
 		22501EA9252FAC4000A58C46 /* dog tinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "dog tinder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22501EAC252FAC4000A58C46 /* dog_tinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dog_tinderApp.swift; sourceTree = "<group>"; };
 		22501EAE252FAC4000A58C46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = "dog tinder/ContentView.swift"; sourceTree = SOURCE_ROOT; };
@@ -87,6 +89,8 @@
 				2222B426254CF35B006A067C /* LargeDogCard.swift */,
 				2222B42E254CF3DC006A067C /* DetailedView.swift */,
 				2222B42A254CF3C0006A067C /* CardModifier.swift */,
+				2215F8DE257744E500059FD2 /* DetailedViewSimple.swift */,
+				2215F8E22577452200059FD2 /* MailView.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -96,7 +100,6 @@
 			children = (
 				222BBCB0253139D600FA19DD /* UserProfileView.swift */,
 				222BBCB1253139D600FA19DD /* HomeView.swift */,
-				222BBCB2253139D600FA19DD /* ChatView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -263,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				91EA67972578FCCB00D382EB /* DataStore.swift in Sources */,
+
 				22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */,
 				916E13502534359200D340A0 /* Dog.swift in Sources */,
 				22501EAD252FAC4000A58C46 /* dog_tinderApp.swift in Sources */,
@@ -273,8 +278,8 @@
 				2222B433254CF434006A067C /* SmallDogCard.swift in Sources */,
 				222BBCB5253139D600FA19DD /* HomeView.swift in Sources */,
 				2222B42B254CF3C0006A067C /* CardModifier.swift in Sources */,
-				222BBCB6253139D600FA19DD /* ChatView.swift in Sources */,
 				916015B625390033006B7309 /* Database.swift in Sources */,
+				2215F8E32577452200059FD2 /* MailView.swift in Sources */,
 				222BBCB4253139D600FA19DD /* UserProfileView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

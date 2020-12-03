@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import UIKit
 
+//displays a summary of the dog's information on a small card. used on the user page
 struct SmallDogCard: View {
     @ObservedObject var dog: Dog
 
@@ -40,9 +41,8 @@ struct SmallDogCard: View {
     }
 }
 
-
- struct HomeView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         SmallDogCard(dog: pompom)
     }
- }
+}
