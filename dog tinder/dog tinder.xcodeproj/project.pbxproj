@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2215F8DF257744E500059FD2 /* DetailedViewSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F8DE257744E500059FD2 /* DetailedViewSimple.swift */; };
+		220223A32579A8300055E056 /* detailedViewSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 220223A22579A8300055E056 /* detailedViewSimple.swift */; };
 		2215F8E32577452200059FD2 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F8E22577452200059FD2 /* MailView.swift */; };
 		2222B427254CF35B006A067C /* LargeDogCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222B426254CF35B006A067C /* LargeDogCard.swift */; };
 		2222B42B254CF3C0006A067C /* CardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222B42A254CF3C0006A067C /* CardModifier.swift */; };
@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2215F8DE257744E500059FD2 /* DetailedViewSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewSimple.swift; sourceTree = "<group>"; };
+		220223A22579A8300055E056 /* detailedViewSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailedViewSimple.swift; sourceTree = "<group>"; };
 		2215F8E22577452200059FD2 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		2222B426254CF35B006A067C /* LargeDogCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeDogCard.swift; sourceTree = "<group>"; };
 		2222B42A254CF3C0006A067C /* CardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModifier.swift; sourceTree = "<group>"; };
@@ -89,8 +89,8 @@
 				2222B426254CF35B006A067C /* LargeDogCard.swift */,
 				2222B42E254CF3DC006A067C /* DetailedView.swift */,
 				2222B42A254CF3C0006A067C /* CardModifier.swift */,
-				2215F8DE257744E500059FD2 /* DetailedViewSimple.swift */,
 				2215F8E22577452200059FD2 /* MailView.swift */,
+				220223A22579A8300055E056 /* detailedViewSimple.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -266,9 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
+				220223A32579A8300055E056 /* detailedViewSimple.swift in Sources */,
 				91EA67972578FCCB00D382EB /* DataStore.swift in Sources */,
-
 				22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */,
 				916E13502534359200D340A0 /* Dog.swift in Sources */,
 				22501EAD252FAC4000A58C46 /* dog_tinderApp.swift in Sources */,
