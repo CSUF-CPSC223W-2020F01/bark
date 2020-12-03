@@ -47,9 +47,6 @@ class storeUser: Codable {
         city = user.city
         state = user.state
         email = user.email
-        morning = user.morning
-        afterNoon = user.afterNoon
-        night = user.night
     }
 }
 func addDogtoList(dawg: storeDog) {
