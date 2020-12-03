@@ -6,7 +6,7 @@
 //
 
 import XCTest
-
+@testable import dog_tinder
 class DogTests: XCTestCase {
 
     override func setUpWithError() throws {
@@ -28,5 +28,43 @@ class DogTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
+    func testDogInfo() {
+        let pompom: Dog = Dog(image: "pompom", name: "Pebbles", breed: .Pomeranian, gender: .female, temperament: "Lazy", size: .small, weight: "5" , description: placeholderDesc)
+        XCTAssertEqual(pompom.name, "Pebbles")
+        XCTAssertEqual(pompom.breed, .Pomeranian)
+        XCTAssertEqual(pompom.temperament, "Lazy")
+        XCTAssertEqual(pompom.size, .small)
+        XCTAssertEqual(pompom.weight, "5")
+        XCTAssertEqual(pompom.description, placeholderDesc)
+    }
+    func testDogChangeName() {
+        let goldie: Dog = Dog(image: "goldie", name: "Big Girl", breed: .GoldenRetriever, gender: .female, temperament: "Active", size: .large, weight: "65" , description: placeholderDesc)
+        goldie.name = "NameChanged"
+        XCTAssertEqual(goldie.name, "NameChanged")
+    }
+    func testDogChangeBreed() {
+        let goldie: Dog = Dog(image: "goldie", name: "Big Girl", breed: .GoldenRetriever, gender: .female, temperament: "Active", size: .large, weight: "65" , description: placeholderDesc)
+        goldie.breed = .EnglishBulldog
+        XCTAssertEqual(goldie.breed, .EnglishBulldog)
+    }
+    func testDogChangeGender() {
+        let goldie: Dog = Dog(image: "goldie", name: "Big Girl", breed: .GoldenRetriever, gender: .female, temperament: "Active", size: .large, weight: "65" , description: placeholderDesc)
+        goldie.gender = .male
+        XCTAssertEqual(goldie.gender, .male)
+    }
+    func testDogChangeTemperament() {
+        let goldie: Dog = Dog(image: "goldie", name: "Big Girl", breed: .GoldenRetriever, gender: .female, temperament: "Active", size: .large, weight: "65" , description: placeholderDesc)
+        goldie.temperament = "Not Active"
+        XCTAssertEqual(goldie.temperament, "Not Active")
+    }
+    func testDogChangeSize() {
+        let goldie: Dog = Dog(image: "goldie", name: "Big Girl", breed: .GoldenRetriever, gender: .female, temperament: "Active", size: .large, weight: "65" , description: placeholderDesc)
+        goldie.size = .medium
+        XCTAssertEqual(goldie.size, .medium)
+    }
+    func testDogChangeWeight() {
+        let goldie: Dog = Dog(image: "goldie", name: "Big Girl", breed: .GoldenRetriever, gender: .female, temperament: "Active", size: .large, weight: "65" , description: placeholderDesc)
+        goldie.weight = "22"
+        XCTAssertEqual(goldie.weight, "22")
+    }
 }
