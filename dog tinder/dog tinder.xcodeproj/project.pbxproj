@@ -25,6 +25,7 @@
 		916E136025343C4400D340A0 /* dog_tinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E135F25343C4400D340A0 /* dog_tinderTests.swift */; };
 		916E137225343CFE00D340A0 /* DogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E137125343CFE00D340A0 /* DogTests.swift */; };
 		916E137625343D1B00D340A0 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E137525343D1B00D340A0 /* UserTests.swift */; };
+		91EA67972578FCCB00D382EB /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EA67962578FCCB00D382EB /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		916E136125343C4400D340A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		916E137125343CFE00D340A0 /* DogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTests.swift; sourceTree = "<group>"; };
 		916E137525343D1B00D340A0 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		91EA67962578FCCB00D382EB /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				916E134F2534359200D340A0 /* Dog.swift */,
 				916015B525390033006B7309 /* Database.swift */,
 				916E134C2534356200D340A0 /* User.swift */,
+				91EA67962578FCCB00D382EB /* DataStore.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -263,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2215F8DF257744E500059FD2 /* DetailedViewSimple.swift in Sources */,
+
+				91EA67972578FCCB00D382EB /* DataStore.swift in Sources */,
+
 				22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */,
 				916E13502534359200D340A0 /* Dog.swift in Sources */,
 				22501EAD252FAC4000A58C46 /* dog_tinderApp.swift in Sources */,

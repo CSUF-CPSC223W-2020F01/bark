@@ -79,4 +79,5 @@ class Dog : Identifiable, ObservableObject{
             return false
         }
     }
+    
 }
