@@ -15,9 +15,9 @@ struct LargeDogCard: View {
 
     var body: some View {
         VStack(alignment: .center) {
-            Image(dog.image)
+            Image(uiImage: dog.image)
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
                 .cornerRadius(10)
                 .padding(20)
             HStack {

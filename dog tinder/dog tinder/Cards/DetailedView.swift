@@ -19,7 +19,7 @@ struct detailedView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                Image(dog.image)
+                Image(uiImage: dog.image)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(10)

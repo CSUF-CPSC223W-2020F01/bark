@@ -8,6 +8,7 @@
 //     Comment: Created Dog into a class to be able to change data 
 //
 import Foundation
+import SwiftUI
 
 enum Breed: String, CaseIterable, Identifiable{
     case Pomeranian = "Pomeranian"
@@ -41,7 +42,7 @@ enum Gender: String, CaseIterable, Identifiable{
 
 class Dog : Identifiable, ObservableObject{
     @Published var id = UUID()
-    @Published var image: String
+    @Published var image = UIImage()
     @Published var name: String
     @Published var breed: Breed
     @Published var gender: Gender
@@ -50,7 +51,7 @@ class Dog : Identifiable, ObservableObject{
     @Published var weight: String
     @Published var description: String
     
-    init (image: String, name: String, breed: Breed, gender: Gender, temperament: String, size: Size , weight: String , description: String){
+    init (image: UIImage, name: String, breed: Breed, gender: Gender, temperament: String, size: Size , weight: String , description: String){
         self.image = image
         self.name = name
         self.breed = breed

@@ -19,7 +19,7 @@ class storeDog: Codable {
     var description: String
     
     func convertInfo(dog: Dog) {
-        image = dog.image
+//        image = dog.image
         name = dog.name
         breed = dog.breed.rawValue
         gender = dog.gender.rawValue

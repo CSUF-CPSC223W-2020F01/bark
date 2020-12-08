@@ -15,7 +15,7 @@ struct SmallDogCard: View {
 
     var body: some View {
         HStack(alignment: .center) {
-            Image(dog.image)
+            Image(uiImage: dog.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(10)

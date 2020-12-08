@@ -116,7 +116,7 @@ struct EditView: View {
 
 func addRow(profile: User) {
     // add row function needs to be able to append a dog object. default is
-    let defaultDog = Dog(image: "dog", name: "Dog name", breed: .Pomeranian, gender: .male, temperament: "good", size: .small, weight: "12", description: "very good dog")
+    let defaultDog = Dog(image: UIImage(named: "pompom")!, name: "Dog name", breed: .Pomeranian, gender: .male, temperament: "good", size: .small, weight: "12", description: "very good dog")
     profile.listOfDogs.append(defaultDog)
 }
 
@@ -146,14 +146,19 @@ struct EditDog: View {
     @ObservedObject var profile: User
     @ObservedObject var dog: Dog
     @State private var showCancelButton: Bool = false
+    @State var isShowingImagePicker = false
+    
+    
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
-            Image(dog.image)
+            Image(uiImage: dog.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .cornerRadius(10)
                 .padding()
-            Button(action: { print("Button pressed") }) {
+            Button(action: {
+                self.isShowingImagePicker.toggle()
+            }, label: {
                 Image(systemName: "pencil")
                     .background(Circle()
                         .fill(Color.white)
@@ -162,7 +167,9 @@ struct EditDog: View {
                     .foregroundColor(/*@START_MENU_TOKEN@*/ .blue/*@END_MENU_TOKEN@*/)
                     .frame(width: 100, height: 100)
                     .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-            }
+            }).sheet(isPresented: $isShowingImagePicker, content: {
+                ImagePickerView(isPresented: $isShowingImagePicker, dog: dog)
+            })
         }
         Form {
             TextField("Dog Name", text: $dog.name)
@@ -189,10 +196,10 @@ struct EditDog: View {
                 .keyboardType(.numberPad)
             TextField("Description", text: $dog.description)
         }
-        // .padding(EdgeInsets(top: 4, leading: 16, bottom: 4, trailing: 16))
+   
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Edit \(dog.name)")
-        // }
+        
     }
 }
 
@@ -203,5 +210,43 @@ extension UIApplication {
         windows
             .first?
             .endEditing(force)
+    }
+}
+
+struct ImagePickerView: UIViewControllerRepresentable{
+    @Binding var isPresented: Bool
+    @ObservedObject var dog: Dog
+
+    func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePickerView>) -> UIViewController {
+        let controller = UIImagePickerController()
+        controller.delegate = context.coordinator
+        return controller
+    }
+    
+    func makeCoordinator() -> ImagePickerView.Coordinator{
+        return Coordinator(parent: self, dog: dog)
+    }
+    
+    class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+        let parent: ImagePickerView
+        @ObservedObject var dog: Dog
+        init(parent: ImagePickerView, dog: Dog){
+            self.parent = parent
+            self.dog = dog
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let selectedImage = info[.originalImage] as? UIImage{
+                print(selectedImage)
+                dog.image = selectedImage
+                
+            }
+            self.parent.isPresented = false
+        }
+        
+    }
+    
+    func updateUIViewController(_ uiViewController: ImagePickerView.UIViewControllerType, context: UIViewControllerRepresentableContext<ImagePickerView>) {
+        
     }
 }
