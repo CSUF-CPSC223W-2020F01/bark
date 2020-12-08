@@ -6,14 +6,14 @@
 //
 
 import Foundation
-
+import SwiftUI
 var placeholderDesc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis, urna a bibendum convallis, est diam convallis ante, sed luctus orci leo id nulla. Nunc eget turpis congue, tempor ex nec, consectetur odio."
 
 //hardcoded example dogs
-var pompom: Dog = Dog(image: "pompom", name: "Pebbles", breed: .Pomeranian, gender: .female, temperament: "Lazy", size: .small, weight: "5" , description: placeholderDesc)
-var husky: Dog = Dog(image: "husky", name: "Dot", breed: .Husky, gender: .male, temperament: "Active", size: .large, weight: "55" , description: placeholderDesc)
-var bulldog: Dog = Dog(image: "englishbulldog", name: "Bobbie", breed: .EnglishBulldog, gender: .male, temperament: "Shy", size: .medium, weight: "50" , description: placeholderDesc)
-var goldie: Dog = Dog(image: "goldie", name: "Big Girl", breed: .GoldenRetriever, gender: .female, temperament: "Active", size: .large, weight: "65" , description: placeholderDesc)
+var pompom: Dog = Dog(image: UIImage(named: "pompom")!, name: "Pebbles", breed: .Pomeranian, gender: .female, temperament: "Lazy", size: .small, weight: "5" , description: placeholderDesc)
+var husky: Dog = Dog(image: UIImage(named:"husky")!, name: "Dot", breed: .Husky, gender: .male, temperament: "Active", size: .large, weight: "55" , description: placeholderDesc)
+var bulldog: Dog = Dog(image: UIImage(named: "englishbulldog")!, name: "Bobbie", breed: .EnglishBulldog, gender: .male, temperament: "Shy", size: .medium, weight: "50" , description: placeholderDesc)
+var goldie: Dog = Dog(image: UIImage (named:"goldie")!, name: "Big Girl", breed: .GoldenRetriever, gender: .female, temperament: "Active", size: .large, weight: "65" , description: placeholderDesc)
 
 
 //hardcoded example users
