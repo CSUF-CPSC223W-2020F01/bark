@@ -11,6 +11,7 @@ struct HomeView: View {
     @ObservedObject var profile: User = user
     @State var searchText: String = ""
     var body: some View {
+        SignInView()
         NavigationView {
             VStack {
                 HStack {

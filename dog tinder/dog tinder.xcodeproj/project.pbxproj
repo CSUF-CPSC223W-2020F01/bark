@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15A6C630FFB09A61854FF168 /* Pods_dog_tinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C800B4982D6B2731CF735682 /* Pods_dog_tinder.framework */; };
 		2215F8DF257744E500059FD2 /* DetailedViewSimple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F8DE257744E500059FD2 /* DetailedViewSimple.swift */; };
 		2215F8E32577452200059FD2 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215F8E22577452200059FD2 /* MailView.swift */; };
 		2222B427254CF35B006A067C /* LargeDogCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2222B426254CF35B006A067C /* LargeDogCard.swift */; };
@@ -19,12 +20,15 @@
 		22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22501EAE252FAC4000A58C46 /* ContentView.swift */; };
 		22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB0252FAC4200A58C46 /* Assets.xcassets */; };
 		22501EB4252FAC4200A58C46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */; };
+		40D08B432579891200BB2D4A /* credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = 40D08B422579891200BB2D4A /* credentials.plist */; };
+		40D08B47257989B000BB2D4A /* GoogleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D08B46257989B000BB2D4A /* GoogleDelegate.swift */; };
 		916015B625390033006B7309 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916015B525390033006B7309 /* Database.swift */; };
 		916E134D2534356200D340A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E134C2534356200D340A0 /* User.swift */; };
 		916E13502534359200D340A0 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E134F2534359200D340A0 /* Dog.swift */; };
 		916E136025343C4400D340A0 /* dog_tinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E135F25343C4400D340A0 /* dog_tinderTests.swift */; };
 		916E137225343CFE00D340A0 /* DogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E137125343CFE00D340A0 /* DogTests.swift */; };
 		916E137625343D1B00D340A0 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E137525343D1B00D340A0 /* UserTests.swift */; };
+		92FC486216AF8D8627D5356F /* Pods_dog_tinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A55A1FDAACCB71681F4BB3CE /* Pods_dog_tinderTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0898528EE5C1595EC6F01731 /* Pods-dog tinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dog tinder.release.xcconfig"; path = "Target Support Files/Pods-dog tinder/Pods-dog tinder.release.xcconfig"; sourceTree = "<group>"; };
 		2215F8DE257744E500059FD2 /* DetailedViewSimple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewSimple.swift; sourceTree = "<group>"; };
 		2215F8E22577452200059FD2 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		2222B426254CF35B006A067C /* LargeDogCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeDogCard.swift; sourceTree = "<group>"; };
@@ -52,6 +57,8 @@
 		22501EB0252FAC4200A58C46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		22501EB5252FAC4200A58C46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		40D08B422579891200BB2D4A /* credentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = credentials.plist; path = ../../../../../Downloads/credentials.plist; sourceTree = "<group>"; };
+		40D08B46257989B000BB2D4A /* GoogleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDelegate.swift; sourceTree = "<group>"; };
 		916015B525390033006B7309 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		916E134C2534356200D340A0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		916E134F2534359200D340A0 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
@@ -60,6 +67,11 @@
 		916E136125343C4400D340A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		916E137125343CFE00D340A0 /* DogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogTests.swift; sourceTree = "<group>"; };
 		916E137525343D1B00D340A0 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		A55A1FDAACCB71681F4BB3CE /* Pods_dog_tinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dog_tinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2C96C855B7B58B6B9CB281A /* Pods-dog tinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dog tinder.debug.xcconfig"; path = "Target Support Files/Pods-dog tinder/Pods-dog tinder.debug.xcconfig"; sourceTree = "<group>"; };
+		C72173BE3A3332602E73D34A /* Pods-dog tinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dog tinderTests.release.xcconfig"; path = "Target Support Files/Pods-dog tinderTests/Pods-dog tinderTests.release.xcconfig"; sourceTree = "<group>"; };
+		C800B4982D6B2731CF735682 /* Pods_dog_tinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_dog_tinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E121DA4E77C73526DAA40C44 /* Pods-dog tinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-dog tinderTests.debug.xcconfig"; path = "Target Support Files/Pods-dog tinderTests/Pods-dog tinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15A6C630FFB09A61854FF168 /* Pods_dog_tinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FC486216AF8D8627D5356F /* Pods_dog_tinderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +132,8 @@
 				22501EAB252FAC4000A58C46 /* dog tinder */,
 				916E135E25343C4400D340A0 /* dog tinderTests */,
 				22501EAA252FAC4000A58C46 /* Products */,
+				DF01C4ABEE34753D06BBB4C4 /* Pods */,
+				E12076D49B8542562B3F0BFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +149,7 @@
 		22501EAB252FAC4000A58C46 /* dog tinder */ = {
 			isa = PBXGroup;
 			children = (
+				40D08B41257988ED00BB2D4A /* GoogleSignIn */,
 				22501EAE252FAC4000A58C46 /* ContentView.swift */,
 				22501EAC252FAC4000A58C46 /* dog_tinderApp.swift */,
 				2222B437254CF609006A067C /* Views */,
@@ -153,6 +170,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		40D08B41257988ED00BB2D4A /* GoogleSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				40D08B422579891200BB2D4A /* credentials.plist */,
+				40D08B46257989B000BB2D4A /* GoogleDelegate.swift */,
+			);
+			path = GoogleSignIn;
+			sourceTree = "<group>";
+		};
 		916E135E25343C4400D340A0 /* dog tinderTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +190,26 @@
 			path = "dog tinderTests";
 			sourceTree = "<group>";
 		};
+		DF01C4ABEE34753D06BBB4C4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2C96C855B7B58B6B9CB281A /* Pods-dog tinder.debug.xcconfig */,
+				0898528EE5C1595EC6F01731 /* Pods-dog tinder.release.xcconfig */,
+				E121DA4E77C73526DAA40C44 /* Pods-dog tinderTests.debug.xcconfig */,
+				C72173BE3A3332602E73D34A /* Pods-dog tinderTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E12076D49B8542562B3F0BFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C800B4982D6B2731CF735682 /* Pods_dog_tinder.framework */,
+				A55A1FDAACCB71681F4BB3CE /* Pods_dog_tinderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -171,9 +217,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22501EB8252FAC4200A58C46 /* Build configuration list for PBXNativeTarget "dog tinder" */;
 			buildPhases = (
+				02E08A8254386696DE369CD4 /* [CP] Check Pods Manifest.lock */,
 				22501EA5252FAC4000A58C46 /* Sources */,
 				22501EA6252FAC4000A58C46 /* Frameworks */,
 				22501EA7252FAC4000A58C46 /* Resources */,
+				F88EC3DCA158B72454833777 /* [CP] Embed Pods Frameworks */,
+				7569AEE34A7DDB671078AE71 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,9 +237,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 916E136425343C4400D340A0 /* Build configuration list for PBXNativeTarget "dog tinderTests" */;
 			buildPhases = (
+				B30375AA7B4BB83B995D13F3 /* [CP] Check Pods Manifest.lock */,
 				916E135925343C4400D340A0 /* Sources */,
 				916E135A25343C4400D340A0 /* Frameworks */,
 				916E135B25343C4400D340A0 /* Resources */,
+				F39BEC48F03C9D0FA60BE59A /* [CP] Embed Pods Frameworks */,
+				F0881B21A769483D4A9C572E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22501EB4252FAC4200A58C46 /* Preview Assets.xcassets in Resources */,
+				40D08B432579891200BB2D4A /* credentials.plist in Resources */,
 				22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,12 +311,128 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		02E08A8254386696DE369CD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dog tinder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7569AEE34A7DDB671078AE71 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dog tinder/Pods-dog tinder-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dog tinder/Pods-dog tinder-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dog tinder/Pods-dog tinder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B30375AA7B4BB83B995D13F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-dog tinderTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0881B21A769483D4A9C572E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dog tinderTests/Pods-dog tinderTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dog tinderTests/Pods-dog tinderTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dog tinderTests/Pods-dog tinderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F39BEC48F03C9D0FA60BE59A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dog tinderTests/Pods-dog tinderTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dog tinderTests/Pods-dog tinderTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dog tinderTests/Pods-dog tinderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F88EC3DCA158B72454833777 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dog tinder/Pods-dog tinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-dog tinder/Pods-dog tinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-dog tinder/Pods-dog tinder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22501EA5252FAC4000A58C46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				2215F8DF257744E500059FD2 /* DetailedViewSimple.swift in Sources */,
+				40D08B47257989B000BB2D4A /* GoogleDelegate.swift in Sources */,
 				22501EAF252FAC4000A58C46 /* ContentView.swift in Sources */,
 				916E13502534359200D340A0 /* Dog.swift in Sources */,
 				22501EAD252FAC4000A58C46 /* dog_tinderApp.swift in Sources */,
@@ -418,6 +587,7 @@
 		};
 		22501EB9252FAC4200A58C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2C96C855B7B58B6B9CB281A /* Pods-dog tinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -440,6 +610,7 @@
 		};
 		22501EBA252FAC4200A58C46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0898528EE5C1595EC6F01731 /* Pods-dog tinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +633,7 @@
 		};
 		916E136525343C4400D340A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E121DA4E77C73526DAA40C44 /* Pods-dog tinderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -481,6 +653,7 @@
 		};
 		916E136625343C4400D340A0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C72173BE3A3332602E73D34A /* Pods-dog tinderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
