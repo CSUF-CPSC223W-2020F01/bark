@@ -10,6 +10,7 @@ import SwiftUI
 var placeholderDesc = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis, urna a bibendum convallis, est diam convallis ante, sed luctus orci leo id nulla. Nunc eget turpis congue, tempor ex nec, consectetur odio."
 
 //hardcoded example dogs
+
 var pompom: Dog = Dog(image: UIImage(named: "pompom")!, name: "Pebbles", breed: .Pomeranian, gender: .female, temperament: "Lazy", size: .small, weight: "5" , description: placeholderDesc)
 var husky: Dog = Dog(image: UIImage(named:"husky")!, name: "Dot", breed: .Husky, gender: .male, temperament: "Active", size: .large, weight: "55" , description: placeholderDesc)
 var bulldog: Dog = Dog(image: UIImage(named: "englishbulldog")!, name: "Bobbie", breed: .EnglishBulldog, gender: .male, temperament: "Shy", size: .medium, weight: "50" , description: placeholderDesc)
