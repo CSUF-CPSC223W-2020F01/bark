@@ -20,9 +20,7 @@
 		22501EB1252FAC4200A58C46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB0252FAC4200A58C46 /* Assets.xcassets */; };
 		22501EB4252FAC4200A58C46 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22501EB3252FAC4200A58C46 /* Preview Assets.xcassets */; };
 		409D7AB32584ACE60035930C /* EditDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D7AB22584ACE60035930C /* EditDogView.swift */; };
-		409D7AB42584ACE60035930C /* EditDogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D7AB22584ACE60035930C /* EditDogView.swift */; };
 		409D7ABA2584ACF70035930C /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D7AB92584ACF70035930C /* EditUserView.swift */; };
-		409D7ABB2584ACF70035930C /* EditUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409D7AB92584ACF70035930C /* EditUserView.swift */; };
 		916015B625390033006B7309 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916015B525390033006B7309 /* Database.swift */; };
 		916E134D2534356200D340A0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E134C2534356200D340A0 /* User.swift */; };
 		916E13502534359200D340A0 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916E134F2534359200D340A0 /* Dog.swift */; };
@@ -298,10 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				916E137625343D1B00D340A0 /* UserTests.swift in Sources */,
-				409D7ABB2584ACF70035930C /* EditUserView.swift in Sources */,
 				916E137225343CFE00D340A0 /* DogTests.swift in Sources */,
 				916E136025343C4400D340A0 /* dog_tinderTests.swift in Sources */,
-				409D7AB42584ACE60035930C /* EditDogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
